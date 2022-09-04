@@ -50,6 +50,9 @@ class PricePrint extends Component {
             .then((response) => {
                 // const { data } = response.data;
                 if (this._isMounted) {
+
+                    console.log("response data", response.data)
+
                     this.setState({
                         role: response.data.role,
                         data: response.data.stocks,
@@ -140,6 +143,7 @@ class PricePrint extends Component {
             size: row.size,
             unit: row.unit,
             unit_price: row.unit_price,
+            id_no: row.id_no
         }
         if (diffs < 0) {
             for (var i = diffs; i < 0; i++) {
@@ -433,7 +437,8 @@ class PricePrint extends Component {
                             options={options} exportCSV
                             cellEdit={cellEditPropMain}
                         >
-                            <TableHeaderColumn dataField='code' width="150" editable={false} isKey={true} >Code</TableHeaderColumn>
+                            <TableHeaderColumn dataField='code'hidden width="150" editable={false} isKey={true} >Code</TableHeaderColumn>
+                            <TableHeaderColumn dataField='id_no' width="170" editable={false} >Product Code</TableHeaderColumn>
                             <TableHeaderColumn dataField='brand' width="150" editable={false} tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }} >Brand</TableHeaderColumn>
                             <TableHeaderColumn dataField='item' editable={false} tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }} >Item</TableHeaderColumn>
                             <TableHeaderColumn dataField='size' editable={false} width="100" >Measure</TableHeaderColumn>
@@ -442,7 +447,7 @@ class PricePrint extends Component {
                             <TableHeaderColumn dataField='unit_price' width="120" editable={false} >SRP</TableHeaderColumn>
                             <TableHeaderColumn dataField='balance' width="120" editable={false} >Balance</TableHeaderColumn>
                             <TableHeaderColumn dataField='id' hidden={true}></TableHeaderColumn>
-                            <TableHeaderColumn  editable={{ validator: this.jobStatusValidator }} >Print</TableHeaderColumn>
+                            <TableHeaderColumn width="80" editable={{ validator: this.jobStatusValidator }} >Print</TableHeaderColumn>
                         </BootstrapTable>
                     </div>
 
