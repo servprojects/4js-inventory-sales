@@ -1450,8 +1450,8 @@ class Items_main extends Component {
                   options={options}
                   exportCSV
                 >
-                  <TableHeaderColumn dataField='code' width="150" tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }}>Code</TableHeaderColumn>
-                  <TableHeaderColumn dataField='id_no' width="80" tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }}>ID No</TableHeaderColumn>
+                  {/* <TableHeaderColumn dataField='code' width="150" tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }}>Code</TableHeaderColumn> */}
+                  <TableHeaderColumn dataField='id_no' width="120" tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }}>Product Code</TableHeaderColumn>
                   <TableHeaderColumn dataField='id' tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }} isKey={true} hidden={true}>id</TableHeaderColumn>
                   <TableHeaderColumn dataField='name' tdStyle={{ whiteSpace: 'normal' }} width="200" thStyle={{ whiteSpace: 'normal' }}  >Name</TableHeaderColumn>
                   <TableHeaderColumn dataField='brand' tdStyle={{ whiteSpace: 'normal' }} width="100" thStyle={{ whiteSpace: 'normal' }} >Brand</TableHeaderColumn>

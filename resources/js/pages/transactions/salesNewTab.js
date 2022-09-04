@@ -2583,14 +2583,18 @@ class SalesNT extends Component {
     e.preventDefault();
     // const {name, value} = e.target;
     var value = this.myInp.value;
+   
     if (value) {
       // this.setState({
       //   result: data
       // })
+   
       const { allitemsTemp, selectedItems } = this.state;
+      console.log("allitemsTemp", allitemsTemp)
       var result = allitemsTemp.filter(function (v) {
 
-        return v.code == value;
+        return v.id_no == value;
+        // return v.code == value; // use code for search
       })
 
       var resultSel = selectedItems.filter(function (v) {

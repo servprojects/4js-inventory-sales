@@ -1032,9 +1032,9 @@ class Stocks extends Component {
               // exportCSV
               cellEdit={role == "Cashier" ? {} : cellEditPropMain}
             >
-              <TableHeaderColumn dataField='code' width="150" editable={false} isKey={true} >Code</TableHeaderColumn>
+              <TableHeaderColumn dataField='code' width="150" hidden editable={false} isKey={true} >Code</TableHeaderColumn>
               {/* <TableHeaderColumn dataField='id' width="80"  >ID No</TableHeaderColumn> */}
-              <TableHeaderColumn dataField='id_no' hidden width="80"  >ID No</TableHeaderColumn>
+              <TableHeaderColumn dataField='id_no'  width="150"  >Product Code</TableHeaderColumn>
               <TableHeaderColumn dataField='category' editable={false} width="100"  >Category</TableHeaderColumn>
               <TableHeaderColumn dataField='item'width="180" tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }} >Item</TableHeaderColumn>
               <TableHeaderColumn dataField='brand' tdStyle={{ whiteSpace: 'normal' }} thStyle={{ whiteSpace: 'normal' }} editable={{ type: 'select', options: { values: brnd } }} width="100" >Brand</TableHeaderColumn>
