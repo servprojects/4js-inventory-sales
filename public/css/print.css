@@ -1,0 +1,25 @@
+@media print {
+    html, body {
+      height: initial !important;
+      overflow: initial !important;
+      -webkit-print-color-adjust: exact;
+    }
+    .iconTable{
+        white-space: nowrap;
+        height: 2%;
+        
+      }
+
+      .page-break {
+        margin-top: 1rem;
+        display: block;
+        page-break-before: auto;
+      }
+  }
+
+  @page {
+    size: auto;
+    /* margin: 20mm; */
+    /* margin: 10mm; */
+    margin: 5mm;
+  }

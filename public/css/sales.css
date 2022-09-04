@@ -1,0 +1,542 @@
+.leftCont{
+    display:inline-block;
+    background-color: #D6DBDF;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    right: 0;
+}
+.maintCont{
+    display:inline-block;
+    width: 70%;
+    height: 2000px;
+}
+.mainTable{
+    width: 100% !important;
+}
+.payable{
+    font-size: 5em;
+}
+.tdPayable{
+   padding-top: 4%;
+}
+.trAmnt{
+    padding: 2%;
+    font-size: 1.5em;
+    font-family: Helvetica;
+}
+.amtlbl{
+    display:inline-block;
+    width: 30%;
+    padding-left: 5%;
+}
+.amtcnt{
+    display:inline-block;
+    width: 30%;
+}
+.chnglbl{
+    display:inline-block;
+    width: 12%;
+}
+.chngcnt{
+    display:inline-block;
+    width: 25%;
+}
+.amtFstyle{
+   width: 80%;
+}
+.slcItem{
+   display:inline-block;
+   width: 50%;
+   /* font-size: 30px; */
+}
+.slcItemCat{
+   display:inline-block;
+   width: 20%;
+   /* font-size: 30px; */
+}
+.slcItemCatNew{
+   display:inline-block;
+   width: 90%;
+   /* font-size: 30px; */
+}
+.qty{
+   padding-left: 1%;
+   display:inline-block;
+   width: 15% !important;
+   font-size: 30px;
+}
+.qtyN{
+   /* padding-left: 1%; */
+   display:inline-block;
+   width: 10% !important;
+   font-size: 30px;
+   /* top: 0; */
+   /* position: absolute; */
+ 
+}
+.qtyInpt{
+   width: 100% !important;
+}
+.qtyInptN{
+  margin-top: 5px;
+  height: 38px !important;
+   width: 100% !important;
+}
+.addbtn{
+   padding-left: 1%;
+   display:inline-block;
+   width: 5%;
+   font-size: 30px;
+}
+.slctItmSec{
+   padding-left: 14%;
+   width: 100%;
+}
+.slctItmSecSales{
+   padding-left: 2%;
+   width: 100%;
+}
+.slctItmSecReturn{
+   padding-left: 14%;
+   width: 100%;
+   /* position: absolute; */
+}
+.returnInputs{
+  width: 100%;
+  /* position: abosulote; */
+}
+.disc{
+    
+   /* padding-left: 14%; */
+   /* padding-left: 16.5%; */
+   padding-left: 3.8%;
+   width: 30%;
+}
+.transac_form{
+   display:inline-block;
+   padding-left: 2%;
+   width: 25%;
+   height: 300px;
+}
+.opts{
+   display:inline-block;
+   font-size: 1em;
+   width: 70%;
+   height: 400px;
+   padding-left: 30%;
+   
+   top: 53%;
+   /* top: 59%; */
+   /* top: 49%; */
+   position: absolute;
+   overflow:hidden;
+}
+.btnOk{
+   width: 48% !important;font-size: 3em;
+}
+.btnCnl{
+  width: 48%  !important;font-size: 3em;
+
+}
+.salesCont{
+   overflow:hidden;
+}
+
+.leftContTab{
+   width: 100%;
+   /* height: 100%; */
+   overflow: auto;
+}
+/* .returnTables{
+  height: 1000px;
+  overflow: auto;
+} */
+.returnTablesCont{
+  /* height: 250px; */
+       height: 285px;   
+      overflow-y: auto;    
+      overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+.releasedTablesCont{
+  /* height: 250px; */
+       height: 240px;   
+      overflow-y: auto;    
+      overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+.salesTablesCont{
+  /* height: 250px; */
+       height: 600px;   
+      overflow-y: auto;    
+      overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+
+.itemLbl{
+   display:inline-block;
+   font-size: 2em;
+   padding-left: 25%;
+   padding-top: 5%;
+   padding-bottom: 5%;
+}
+.tmCount{
+   display:inline-block;
+   font-size: 100%;
+   width: 30%;
+   padding-left: 2%;
+   padding-top: 2%;
+   /* padding-bottom: 2%; */
+   padding-bottom: 2%;
+  
+}
+.tmCountCont{
+   background: #566573;
+   color: white;
+   border-radius: 5px;
+   height: 40px;
+   /* top: 2%; */
+   top: 1%;
+   position: absolute ;
+   padding: 3%;
+}
+.tdAllItems{
+   background: white;
+   
+}
+.tdAllItemsCont{
+   padding: 8px;
+}
+.details{
+   display:inline-block;
+   width: 25%;
+   height: 40%;
+   background: #D6DBDF;
+   border-radius: 5px;
+   position: absolute;
+   left: 19%;
+   padding: .4%;
+}
+.AllItems{
+ padding: 2%;
+ height: 75%;
+}
+.AllItemsCharge{
+ padding: 2%;
+ height: auto !important;
+}
+.AllItemsSales{
+ padding: 2%;
+ /* height: 75%; */
+}
+.tableStyle{
+  height: 50px !important;
+}
+
+.purch_new{
+ padding: 2%;
+ height: 100%;
+
+}
+.btnAllitm{
+   padding-right: 0;
+}
+
+
+/* modal */
+
+ .button {
+   font-size: 1em;
+   padding: 10px;
+   color: #fff;
+   border: 2px solid #06D85F;
+   border-radius: 20px/50px;
+   text-decoration: none;
+   cursor: pointer;
+   /* transition: all 0.3s ease-out; */
+ }
+ .button:hover {
+   background: #06D85F;
+ }
+ 
+ .overlay {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   overflow-y: scroll;
+   background: rgba(0, 0, 0, 0.7);
+   /* transition: opacity 500ms; */
+   visibility: hidden;
+   opacity: 0;
+   /* height: auto; */
+   z-index: 100;
+ }
+ .overlay2 {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   overflow-y: scroll;
+   background: rgba(0, 0, 0, 0.7);
+   /* transition: opacity 500ms; */
+   visibility: hidden;
+   opacity: 0;
+   /* height: auto; */
+   z-index: 100;
+ }
+ .overlay:target {
+   visibility: visible;
+   opacity: 1;
+ }
+ .overlay2:target {
+   visibility: visible;
+   opacity: 1;
+ }
+ 
+ .popup {
+   margin: 70px auto;
+   padding: 20px;
+   background: #fff;
+   border-radius: 5px;
+   width: 80%;
+   /* height: 95%; */
+   position: relative;
+   /* transition: all 5s ease-in-out; */
+ }
+ 
+ .popup h2 {
+   margin-top: 0;
+   color: #333;
+   font-family: Tahoma, Arial, sans-serif;
+ }
+ .popup .close {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   /* transition: all 200ms; */
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+   color: #333;
+ }
+ .popup .close:hover {
+   color: #06D85F;
+ }
+ /*  */
+ .confcont{
+   /* position: absolute; */
+   margin-top: 20%;
+   /* margin-top: 30%; */
+   margin-left: 0;
+ }
+ .popupConf {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 20%;
+  /* height: 95%; */
+  position: relative;
+  /* transition: all 5s ease-in-out; */
+}
+
+.popupConf h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popupConf .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  /* transition: all 200ms; */
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popupConf .close:hover {
+  color: #06D85F;
+}
+ /*  */
+ .popup1 {
+   margin: 70px auto;
+   padding: 20px;
+   background: #fff;
+   border-radius: 5px;
+   width: 30%;
+   height: 65%;
+   position: relative;
+   /* transition: all 5s ease-in-out; */
+ }
+ 
+ .popup1 h2 {
+   margin-top: 0;
+   color: #333;
+   font-family: Tahoma, Arial, sans-serif;
+ }
+ .popup1 .close {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   /* transition: all 200ms; */
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+   color: #333;
+ }
+ .popup1 .close:hover {
+   color: #06D85F;
+ }
+ /* .popup .content { */
+   /* max-height: 30%; */
+   /* max-height: auto; */
+   /* overflow: auto; */
+ /* } */
+ .hide{
+    display: none;
+ }
+ 
+ /* purchase modal */
+ .purmodal {
+   margin: 70px auto;
+   padding: 20px;
+   background: #fff;
+   border-radius: 5px;
+   width: 40%;
+   /* height: 80%; */
+   position: relative;
+   /* transition: all 5s ease-in-out; */
+ }
+ 
+ .purmodal h2 {
+   margin-top: 0;
+   color: #333;
+   font-family: Tahoma, Arial, sans-serif;
+ }
+ .purmodal .close {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   /* transition: all 200ms; */
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+   color: #333;
+ }
+ .purmodal .close:hover {
+   color: #06D85F;
+ }
+ 
+ .purmodal1 {
+   margin: 70px auto;
+   padding: 20px;
+   background: #fff;
+   border-radius: 5px;
+   width: 40%;
+   /* height: 80%; */
+   position: relative;
+   /* transition: all 5s ease-in-out; */
+ }
+ 
+ .purmodal1 h2 {
+   margin-top: 0;
+   color: #333;
+   font-family: Tahoma, Arial, sans-serif;
+ }
+ .purmodal1 .close {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   /* transition: all 200ms; */
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+   color: #333;
+ }
+ .purmodal1 .close:hover {
+   color: #06D85F;
+ }
+ 
+
+ /* Print Sales Invoice */
+ .p_compDet{
+   display:inline-block;
+ }
+ .p_invDet{
+   display:inline-block;
+   right: 5%;
+   position: absolute;
+ }
+ .p_table{
+    width: 100%;
+    margin: 2%;
+ }
+ 
+ .inline_block{
+   display:inline-block;
+ }
+ .p_payableTab{
+    position: relative;
+    left: 80%;
+ }
+ .hide_forms{
+    position: absolute;
+    width: 100%;
+ }
+
+ .custForm{
+    width: 100%;
+ }
+ .show.react-bs-table-sizePerPage-dropdown ul:last-child {
+  display: block;
+}
+
+/* POS RECEIPT */
+.pos_body{
+  font-size: small;
+}
+.pos_table{
+  font-size: small;
+  word-wrap: break-word;
+  width: 235px !important;
+}
+.pos_table td{
+  word-wrap: break-word;
+}
+
+.pos_container{
+  /* left: 5px; */
+  /* margin-left:5px ; */
+  /* margin-right:5px ; */
+  /* text-align: center; */
+  /* width: 245px; */
+  width: 265px;
+  margin: 2px;
+}
+.pos_container_new{
+  /* left: 5px; */
+  /* margin-left:5px ; */
+  /* margin-right:5px ; */
+  /* text-align: center; */
+  /* width: 245px; */
+  width: 265px;
+  margin: 3px;
+}
+/* POS RECEIPT */
+
+
+
+ @media screen and (max-width: 700px){
+   .box{
+     width: 70%;
+   }
+   .popup{
+     width: 70%;
+   }
+   .popup1{
+     width: 70%;
+   }
+ }

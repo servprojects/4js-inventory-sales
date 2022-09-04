@@ -1,0 +1,50 @@
+.card_amt{
+    width: 50%;
+}
+.dashicon{
+    font-size: 50px !important;
+    position: absolute;
+    right: 6%;
+    top: 40%;
+    color: #43C6AC;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+.dashiconCoin{
+   
+    position: absolute;
+    right: 6%;
+    top: 25%;
+    color: #43C6AC;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+  .contentDash{
+    /* top: 110px; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    top: 25px;
+    position: relative;
+    margin-left: 2%;
+    margin-right: 12%;
+}
+.receivables{
+  cursor: pointer;
+}
+.uppaymts{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 46%;
+  /* background-color: #d3d3d3; */
+  border-radius:  5px;
+  height: 300px;
+  overflow: auto;
+  margin-left: 2%;
+  font-size: 12px !important;
+}
+.uppaymts_cont{
+  margin: 2%;
+}
+.trBtsClass{
+  padding: 3px !important;
+}
