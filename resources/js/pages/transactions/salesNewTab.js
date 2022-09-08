@@ -206,7 +206,7 @@ class SalesNT extends Component {
 
     Http.get(`${this.api}`)
       .then((response) => {
-        console.log("data response", response)
+        
 
         // Code
         var userID = response.data.userId;
@@ -272,7 +272,7 @@ class SalesNT extends Component {
       })
 
       .catch((error) => {
-        console.log('error fetch', error)
+       
         if (this._isMounted) {
           this.setState({
             error: 'Unable to fetch data.',
@@ -287,8 +287,7 @@ class SalesNT extends Component {
 
       Http.post(`/api/v1/sysmode`)
       .then(({ data }) => {
-        console.log("data.spec")
-        console.log(data.spec)
+       
         localStorage.setItem('sysmode', data.spec)
         if(data.spec == "pos"){
         this.setState({
@@ -331,13 +330,12 @@ class SalesNT extends Component {
   getSystemMode() {
     Http.post(`/api/v1/sysmode`)
       .then(({ data }) => {
-        console.log("data.spec")
-        console.log(data.spec)
+       
 
 
         return data.spec;
         // setTimeout(function(){
-        //   console.log("hays")
+       
         //   if(data.spec == "pos"){
         //     this.setItemReturnModule();
         //    }
@@ -355,7 +353,7 @@ class SalesNT extends Component {
   }
 
   setItemReturnModule=()=>{
-  console.log("setItemReturnModule")
+
     this._isMounted = true
     if (this._isMounted) {
       this.setState({
@@ -731,7 +729,7 @@ class SalesNT extends Component {
       this.setState({ item_id: value })
     }
     const { allitems } = this.state;
-    console.log("change item", allitems)
+   
     var result = allitems.filter(function (v) {
       return v.id == value;
     })
@@ -1253,7 +1251,7 @@ class SalesNT extends Component {
               transDetails: response.data.transaction, transItems: response.data.items
             });
           }
-          console.log(response.data.returns)
+         
           toast("Receipt Exist")
         }
 
@@ -1311,7 +1309,7 @@ class SalesNT extends Component {
       items: JSON.stringify(selectedItems)
 
     }
-    console.log(subs)
+   
     // if (this._isMounted) { this.setState({ loading: true }); }
     if (selectedItems === undefined || selectedItems.length == 0) {
       if (this._isMounted) { this.setState({ loading: false }); }
@@ -1326,8 +1324,7 @@ class SalesNT extends Component {
           // if (this.state.cust_name && this.state.amountRes) {
           if (this.state.amountRes) {
 
-            // console.log("thrown")
-            // console.log(subs)
+           
             this.addSales(subs);
 
           } else {
@@ -1375,8 +1372,7 @@ class SalesNT extends Component {
 
           var newItems = allitemsTemp;
           selectedItems.map((itm) => {
-            // console.log("gggggg")
-            // console.log(itm.id)
+           
             // this.updateBalance(itm.id, itm.Quantity, allitemsTemp)
             commentIndex = newItems.findIndex(function (c) {
               return c.id == itm.id;
@@ -1391,7 +1387,7 @@ class SalesNT extends Component {
             newData = update(newItems, {
               $splice: [[commentIndex, 1, updatedComment]]
             });
-            // console.log(result[0].balance - itm.Quantity)
+           
             newItems = newData
           })
           if (this._isMounted) {
@@ -1418,7 +1414,7 @@ class SalesNT extends Component {
           //   selectedItems.forEach(function (itm) {
           //     // var x = arrayItem.prop1 + 2;
           //     this.updateBalance(itm.id, itm.Quantity, allitemsTemp)
-          //     console.log(itm.id);
+        
           // });
           // update item balance
 
@@ -1663,8 +1659,7 @@ class SalesNT extends Component {
         // if (this.state.amountRes) {
 
         // Http.post(`/api/v1/transaction/returnItem`, subs)
-        // console.log("submit return")
-        // console.log(subs)
+       
         this.addReturn(subs);
 
         // } else {
@@ -1709,8 +1704,7 @@ class SalesNT extends Component {
 
             var newItems = allitemsTemp;
             selectedItems.map((itm) => {
-              // console.log("gggggg")
-              // console.log(itm.id)
+             
               // this.updateBalance(itm.id, itm.Quantity, allitemsTemp)
               commentIndex = newItems.findIndex(function (c) {
                 return c.id == itm.id;
@@ -1725,7 +1719,7 @@ class SalesNT extends Component {
               newData = update(newItems, {
                 $splice: [[commentIndex, 1, updatedComment]]
               });
-              // console.log(result[0].balance - itm.Quantity)
+              
               newItems = newData
             })
             if (this._isMounted) {
@@ -1951,8 +1945,7 @@ class SalesNT extends Component {
             cust_name: data.name,
             show_partial: { display: "block" },
           });
-          // console.log(data.name)
-          // console.log(value)
+         
         }
       })
       .catch(() => {
@@ -2400,12 +2393,12 @@ class SalesNT extends Component {
   }
   onSearchChange = (e, value) => {
     const { allitemsTemp } = this.state;
-    console.log("on searh", allitemsTemp)
+    
     this._isMounted = true
     if (this._isMounted) {
       this.setState({ loadingitm: true })
     }
-    // console.log(value.searchQuery)
+    
 
     if (this.state.timeout) clearTimeout(this.state.timeout);
     this.state.timeout = setTimeout(() => {
@@ -2431,7 +2424,7 @@ class SalesNT extends Component {
       }
       )
 
-      // console.log(result)
+      
 
       if (this._isMounted) {
         this.setState({ allitems: result, loadingitm: false })
@@ -2498,10 +2491,10 @@ class SalesNT extends Component {
       if (!result) {
         var message = "Invalid Item";
       }
-      // console.log(result[0].id)
+      
       var exist = "no";
       selectedItems.map((itemex) => {
-        console.log(itemex.id)
+      
         if (itemex.id == result[0].id) {
           exist = "yes";
 
@@ -2542,8 +2535,7 @@ class SalesNT extends Component {
         // })
         // var selectedItems = this.state.selectedItems;
         var value = parseFloat(resultSel[0].Quantity) + 1;
-        // console.log(result[0].balance)
-        // console.log(value)
+       
         if (value > result[0].balance) {
           toast("Item balance is not enough", {
             position: toast.POSITION.BOTTOM_RIGHT,
@@ -2578,7 +2570,7 @@ class SalesNT extends Component {
         position: toast.POSITION.BOTTOM_RIGHT,
         className: 'foo-bar'
       });
-      // console.log(data)
+      
     }
   }
 
@@ -2609,10 +2601,10 @@ class SalesNT extends Component {
       if (!result) {
         var message = "Invalid Item";
       }
-      // console.log(result[0].id)
+     
       var exist = "no";
       selectedItems.map((itemex) => {
-        console.log(itemex.id)
+       
         if (itemex.id == result[0].id) {
           exist = "yes";
 
@@ -2653,8 +2645,7 @@ class SalesNT extends Component {
         // })
         // var selectedItems = this.state.selectedItems;
         var val = parseFloat(resultSel[0].Quantity) + 1;
-        // console.log(result[0].balance)
-        // console.log(value)
+       
         if (val > result[0].balance) {
           toast("Item balance is not enough", {
             position: toast.POSITION.BOTTOM_RIGHT,
@@ -2689,7 +2680,7 @@ class SalesNT extends Component {
         position: toast.POSITION.BOTTOM_RIGHT,
         className: 'foo-bar'
       });
-      // console.log(data)
+     
 
       this.myInpForm.reset()
     }
@@ -2749,7 +2740,7 @@ class SalesNT extends Component {
       text: items.id_no.concat('\xa0\xa0\xa0(', String(items.balance), ')\xa0\xa0\xa0\xa0', items.name, "-", items.brand, " : ", items.size || items.unit ? items.size + " " + items.unit : "(No Size Spec.)", '\xa0\xa0\xa0\xa0[', formatter.format(items.unit_price), ']')
       // text: items.code.concat('\xa0\xa0\xa0(', String(items.balance), ')\xa0\xa0\xa0\xa0', items.name, "-", items.brand, " : ", items.size || items.unit ? items.size + " " + items.unit : "(No Size Spec.)", '\xa0\xa0\xa0\xa0[', formatter.format(items.unit_price), ']')
     }));
-    // console.log(allitems)
+   
     return (
       <>
 
@@ -3029,8 +3020,7 @@ class SalesNT extends Component {
     const dis_devfee = this.state.dis_devfee;
     const dis_discount = this.state.dis_discount;
 
-    // console.log(selectedItems.length)
-    // console.log(selectedItems)
+   
 
     var today = new Date();
     var dd = today.getDate();
@@ -3045,14 +3035,12 @@ class SalesNT extends Component {
 
     today = yyyy + '-' + mm + '-' + dd;
 
-    // console.log("transItems")
-    // console.log(transItems)
+  
 
 
     var today = new Date();
     var nTime = today.getHours();
-    // console.log("time")
-    // console.log(nTime)
+   
     return (
       <div id="fullscreen_viewer" style={{ backgroundColor: "white" }} tabIndex="0" onClick={this.timeCheck}>
         {/* <div id="fullscreen_viewer" style={{ backgroundColor: "white" }}tabIndex="0" onClick={() => {this.myInp.focus()}} onFocus={this.focusBarscan} onClick={this.focusBarscan}> */}
