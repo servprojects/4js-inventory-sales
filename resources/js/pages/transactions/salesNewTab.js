@@ -206,7 +206,7 @@ class SalesNT extends Component {
 
     Http.get(`${this.api}`)
       .then((response) => {
-
+        console.log("data response", response)
 
         // Code
         var userID = response.data.userId;
@@ -271,7 +271,8 @@ class SalesNT extends Component {
         this.identifyCurrentUser();
       })
 
-      .catch(() => {
+      .catch((error) => {
+        console.log('error fetch', error)
         if (this._isMounted) {
           this.setState({
             error: 'Unable to fetch data.',
@@ -730,6 +731,7 @@ class SalesNT extends Component {
       this.setState({ item_id: value })
     }
     const { allitems } = this.state;
+    console.log("change item", allitems)
     var result = allitems.filter(function (v) {
       return v.id == value;
     })
@@ -2398,6 +2400,7 @@ class SalesNT extends Component {
   }
   onSearchChange = (e, value) => {
     const { allitemsTemp } = this.state;
+    console.log("on searh", allitemsTemp)
     this._isMounted = true
     if (this._isMounted) {
       this.setState({ loadingitm: true })
@@ -2419,6 +2422,7 @@ class SalesNT extends Component {
             || data.name.toLowerCase().includes(val.toLowerCase())
             || data.brand.toLowerCase().includes(val.toLowerCase())
             || data.category.toLowerCase().includes(val.toLowerCase())
+            || data.id_no.toLowerCase().includes(val.toLowerCase())
           ) {
             return data
             // return []
@@ -2590,7 +2594,7 @@ class SalesNT extends Component {
       // })
    
       const { allitemsTemp, selectedItems } = this.state;
-      console.log("allitemsTemp", allitemsTemp)
+      
       var result = allitemsTemp.filter(function (v) {
 
         return v.id_no == value;
@@ -2742,7 +2746,8 @@ class SalesNT extends Component {
     })
     const itms = allitems.map((items) => ({
       key: items.id, value: items.id,
-      text: items.code.concat('\xa0\xa0\xa0(', String(items.balance), ')\xa0\xa0\xa0\xa0', items.name, "-", items.brand, " : ", items.size || items.unit ? items.size + " " + items.unit : "(No Size Spec.)", '\xa0\xa0\xa0\xa0[', formatter.format(items.unit_price), ']')
+      text: items.id_no.concat('\xa0\xa0\xa0(', String(items.balance), ')\xa0\xa0\xa0\xa0', items.name, "-", items.brand, " : ", items.size || items.unit ? items.size + " " + items.unit : "(No Size Spec.)", '\xa0\xa0\xa0\xa0[', formatter.format(items.unit_price), ']')
+      // text: items.code.concat('\xa0\xa0\xa0(', String(items.balance), ')\xa0\xa0\xa0\xa0', items.name, "-", items.brand, " : ", items.size || items.unit ? items.size + " " + items.unit : "(No Size Spec.)", '\xa0\xa0\xa0\xa0[', formatter.format(items.unit_price), ']')
     }));
     // console.log(allitems)
     return (
